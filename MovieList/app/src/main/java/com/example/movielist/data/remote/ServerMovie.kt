@@ -1,4 +1,6 @@
-package com.example.movielist
+package com.example.movielist.data.remote
+
+import com.example.movielist.data.Movie
 
 data class ServerMovie(
     val adult: Boolean,
@@ -14,5 +16,14 @@ data class ServerMovie(
     val title: String,
     val video: Boolean,
     val vote_average: Double,
-    val vote_count: Int
+    val vote_count: Int,
+    val favorite: Boolean = false
+)
+
+fun ServerMovie.toMovie() = Movie(
+    id = 0,
+    title = title,
+    overview = overview,
+    posterPath = poster_path,
+    favorite = favorite
 )
