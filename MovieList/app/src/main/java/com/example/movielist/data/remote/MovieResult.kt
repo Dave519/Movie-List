@@ -1,4 +1,4 @@
-package com.example.movielist
+package com.example.movielist.data.remote
 
 data class MovieResult(
     val page: Int,
